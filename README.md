@@ -1,33 +1,37 @@
 # Título del proyecto
 EQCalculator(??)
-# Integrantes
 
+# Integrantes
 | Nombre| Github nickname|
-| ----|----|
+|----|----|
 | Daniel Felipe Montenegro Herrera  | DafMontenegro |
 | Juan Antonio Garcia Cortes  | juagarciaco |
 | Mateo Quintero Salgado  | msalgadoq  |
-
 
 # Introducción
 
 ## Problemática
 
-Se desea crear una aplicación que calcule de de forma rápida y clara propiedades termodinámicas y diferentes variables (composiciones, presiones parciales, fugacidades, coeficientes de actividad) para diferentes mezclas de componentes en equilibrio termodinámico.
+>"Un requisito importante para el diseño y optimización de unidades de operación o plantas industriales en el área química, farmacéutica, petroquímica, ambiental, de alimentos y producción de energía es el conocimiento adecuado de las propiedades termofísicas de los componentes puros y sus mezclas"
+
+A lo largo de los años se han consolidado importantes bases de datos con propiedades termofísicas de fluidos puros, sin embargo, cuando se trata de mezclas binarias o de más componentes, las propiedades dependen (y muy rara vez de forma lineal) de su composición, y además, sufren alteraciones debido a interacciones intermoleculares (corto medio y largo rango) y distintos efectos a nivel atómico/molecular, por lo que es imposible obtener bases de datos "completas" para propiedades de mezclas.  
+
+La infinidad de mezclas posibles entre distintos fluidos a distintas composiciones y condiciones ambientales hicieron necesario el desarrollo de modelos termodinámicos capaces de estimar y/o predecir el comportamiento y propiedades de estas mezclas, por lo que se han desarrollado varios modelos, que van desde simples (Margules, Van Laar) hasta los más complejos (UNIQUAC, UNIFAC). Cada modelo tiene sus propias restricciones y según investigación experimental se ajusta mejor a "cierto tipo de mezclas", según la naturaleza de sus componentes. Los cálculos que requieren incluso de los modelos más simples son dispendiosos de realizar a lápiz y papel, por lo que se busca una solución a través de un software que permita una evaluación rápida y usar diferentes modelos para poder comparar resultados. 
 
 ## Marco teórico
 
 <Sustento teórico del proyecto. Referencias: artículos, sitios web>
 
+
 ## Antecedentes
 
-<Aplicaciones similares, url's de los repos>
+Aplicaciones que calculen propiedades termodinámicas usualmente se incluyen en los simuladores de Ingeniería Química. El ejemplo más reconocido, sería la sección de ASPEN Properties de
 
 # Objetivos
 
 ## General
 
-<Enmarque el proyecto en un objetivo global>
+Teniendo en cuenta la problemática, se desea crear una **aplicación** que calcule de de forma rápida diferentes **propiedades termodfísicas** (composiciones globales y/o en fases, presiones parciales, fugacidades, coeficientes de actividad, entre otras) para diferentes **mezclas de fluidos en equilibrio termodinámico** (Líquido-líquido <**L-L**> y líquido vapor <**L-V**>), a través de los distintos modelos termodinámicos desarrollados. La aplicación recomendará opcionalmente, el modelo más apropiado para cada mezcla evaluada. (A medida que avance del proyecto, se definirá el alcance de la aplicación, es decir, con qué sustancias funcionará, y la cantidad máxima de componentes de la mezcla).
 
 ## Específicos
 
