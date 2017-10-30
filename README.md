@@ -13,7 +13,7 @@ EQCalculator(??)
 
 ## Problemática
 
-<Descripción del problema que se busca resolver>
+Se desea crear una aplicación que calcule de de forma rápida y clara propiedades termodinámicas y diferentes variables (composiciones, presiones parciales, fugacidades, coeficientes de actividad) para diferentes mezclas de componentes en equilibrio termodinámico.
 
 ## Marco teórico
 
