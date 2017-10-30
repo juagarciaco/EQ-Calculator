@@ -20,8 +20,13 @@ La infinidad de mezclas posibles entre distintos fluidos a distintas composicion
 
 ## Marco teórico
 
-<Sustento teórico del proyecto. Referencias: artículos, sitios web>
+Teoría del equilibro termodinámico de fases. Disponible en:
 
+1. García, I. Introducción al equilibrio termodinámico y de fases. Universidad Nacional de Colombia. Bogotá, 1995.
+1. Smith, J.M., Van Ness, H .C. y Abbot, M.M. Introducción a la termodinámica en Ingeniería Química. Capítulos 6, 10. 7ª edición, Mc Graw-Hill Interamericana editores S. A, de C.V., México, 2007. 
+
+Ecuaciones matemáticas de los modelos:
+![Modelos empíricos](C:\Users\Acer\Documents\2017-2\POO)
 
 ## Antecedentes
 
