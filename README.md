@@ -1,10 +1,10 @@
 # Título del proyecto
-EQCalculator(??)
+EQCalculator.
 
 # Integrantes
 | Nombre| Github nickname|
 |----|----|
-| Daniel Felipe Montenegro Herrera  | DafMontenegro |
+| Daniel Felipe Montenegro  | DafMontenegro |
 | Juan Antonio Garcia Cortes  | juagarciaco |
 | Mateo Quintero Salgado  | msalgadoq  |
 
