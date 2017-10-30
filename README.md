@@ -3,9 +3,9 @@ EQCalculator(??)
 # Integrantes
 
 | Nombre | Github nickname |
-|Daniel Felipe Montenegro Herrera|DafMontenegro|
-|Juan Antonio Garcia Cortes|juagarciaco|
-|Mateo Quintero Salgado|msalgado97|
+| Daniel Felipe Montenegro Herrera  | DafMontenegro |
+| Juan Antonio Garcia Cortes  | juagarciaco |
+| Mateo Quintero Salgado  | msalgado97  |
 
 # Introducción
 
