@@ -2,10 +2,12 @@
 EQCalculator(??)
 # Integrantes
 
-| Nombre | Github nickname |
+| Nombre| Github nickname|
+| ----|----|
 | Daniel Felipe Montenegro Herrera  | DafMontenegro |
 | Juan Antonio Garcia Cortes  | juagarciaco |
 | Mateo Quintero Salgado  | msalgado97  |
+
 
 # Introducción
 
@@ -33,5 +35,4 @@ EQCalculator(??)
 
 # Requisitos
 
-Hola, esto es una prueba.
 <Indique el lenguaje y los requerimientos esperados de la aplicación. Liste las [librerías de Processing](https://processing.org/reference/libraries/) que se emplearían para su desarrollo.>
