@@ -1,3 +1,5 @@
+import java.lang.String;
+import java.lang.String;
 import controlP5.*;
 import java.util.*;
 Slider slider1;
@@ -8,6 +10,7 @@ Slider slider5;
 Slider slider6;
 Slider slider7;
 Slider slider8;
+Textfield text1;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 
@@ -64,5 +67,7 @@ void draw() {
  textSize(100);
  fill(0, 128, 0); 
  text("EQ CALCULATOR", 500, 150);
+      fill(255);
+    text("valor" + text1.get(), 50,50); 
 
 }

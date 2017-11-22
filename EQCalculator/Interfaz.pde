@@ -1,9 +1,9 @@
 void interfaz(){
   
-   for(int j = 0; j < 9; j++){
+   for(int j = 0; j < 8; j++){
      cp5 = new ControlP5(this);
      cp5.addScrollableList("Elija el componente.")
-     .setPosition(100, 650 - (j*50))
+     .setPosition(100, 600 - (j*50))
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
@@ -12,48 +12,79 @@ void interfaz(){
      }
      
      cp5 = new ControlP5(this);
-     
+       
      slider1 =  cp5.addSlider("")
      .setPosition(400, 250)
      .setSize(200, 20)
-     .setNumberOfTickMarks(20)
-     .set
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
      
-          cp5 = new ControlP5(this);
+     cp5 = new ControlP5(this);
      
      slider2 =  cp5.addSlider("")
      .setPosition(400, 300)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
+
+     cp5 = new ControlP5(this);
      
      slider3 =  cp5.addSlider("")
      .setPosition(400, 350)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
+     
+     cp5 = new ControlP5(this);
      
      slider4 =  cp5.addSlider("")
      .setPosition(400, 400)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
-
+          
+     cp5 = new ControlP5(this);
+     
      slider5 =  cp5.addSlider("")
      .setPosition(400, 450)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
+              
+     cp5 = new ControlP5(this);
      
      slider6 =  cp5.addSlider("")
      .setPosition(400, 500)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
      
-     slider1 =  cp5.addSlider("")
-     .setPosition(400, 250)
+               
+     cp5 = new ControlP5(this);
+     
+     slider7 =  cp5.addSlider("")
+     .setPosition(400, 550)
      .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
      ;
     
-    
-    
+               
+     cp5 = new ControlP5(this);
+     
+     slider8 =  cp5.addSlider("")
+     .setPosition(400, 600)
+     .setSize(200, 20)
+     .setNumberOfTickMarks(21)
+     .setSliderMode(Slider.FLEXIBLE)
+     ;
+        
 
   cp5.addScrollableList("Elija numero de componentes")
      .setPosition(100, 100)
@@ -72,7 +103,7 @@ void interfaz(){
       .setFont(createFont("arial",15))
       ;
 
-cp5.addTextfield("Presión")
+text1 = cp5.addTextfield("Presión")
      .setLabel("Presión (Bar)")
      .setPosition(800, 300)
      .setSize(300, 30)
@@ -88,7 +119,12 @@ cp5.addTextfield("Temp")
      .setAutoClear(false)
      ;
 
-  text("EQ CALCULATOR", 500, 150);
-     ;
-     
      }
+     
+
+     
+/*public void comprobar_mezcla{
+  if ((slider1+slider2+slider3+slider4+slider5+slider6+slider7+slider8) != 100){
+    text("ERROR: Suma de porcentajes debe ser 100.", 200, 700);
+  }
+} */
