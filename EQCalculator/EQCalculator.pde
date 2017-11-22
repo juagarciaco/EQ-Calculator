@@ -3,6 +3,7 @@ import controlP5.*;
 import java.util.*;
 
 ControlP5 cp5;
+String selected = null;
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 
 void setup() {
@@ -76,11 +77,11 @@ text("EQ CALCULATOR", 500, 150);
 
 }
 
-void dropdown(int n) {
-  /* request the selected item based on index n */
+void dropdown(int n, int index) {
+  
   println(n, cp5.get(ScrollableList.class, "dropdown").getItem(n));
   CColor c = new CColor();
   c.setBackground(color(255,0,0));
   cp5.get(ScrollableList.class, "m").getItem(n).put("color", c);
-  
+  //selected = cp5.get(ScrollableList.class, "dropdown").getItem(n).get("value");  
 }
