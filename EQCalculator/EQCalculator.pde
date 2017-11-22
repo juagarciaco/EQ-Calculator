@@ -1,6 +1,15 @@
-
 import controlP5.*;
 import java.util.*;
+Slider slider1;
+Slider slider2;
+Slider slider3;
+Slider slider4;
+Slider slider5;
+Slider slider6;
+Slider slider7;
+Slider slider8;
+List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
+List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 
 //Program data
 double[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 0.000},
@@ -41,75 +50,19 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 
 ControlP5 cp5;
 String selected = null;
-List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
+
 
 void setup() {
   fullScreen();
   background(0);
-     
-     for(int j = 0; j < 9; j++){
-     cp5 = new ControlP5(this);
-     cp5.addScrollableList("Elija el componente.")
-     .setPosition(100, 650 - (j*50))
-     .setSize(200, 100)
-     .setBarHeight(20)
-     .setOpen(false)
-     .setItemHeight(20)
-     .addItems(k);
-     }
-     
-     for (int d = 0; d < 9; d++){
-      cp5 = new ControlP5(this);
-      cp5.addTextfield("")
-     .setPosition(400, 650 - (d*50))
-     .setSize(200, 20)
-     .setFont(createFont("arial",20))
-     .setAutoClear(false)
-     ;
-     }
-     
-    cp5 = new ControlP5(this);
-  List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
-  cp5.addScrollableList("Elija numero de componentes")
-     .setPosition(100, 100)
-     .setSize(300, 200)
-     .setBarHeight(20)
-     .setItemHeight(20)
-     .setValue(1)
-     .setOpen(false)
-     .addItems(l)
-     ;
-     
-  cp5.addButton("Calcular")
-      .setLabel("Calcular")
-      .setPosition(1000, 600)
-      .setSize(200, 100)
-      .setFont(createFont("arial",15))
-      ;
-
-cp5.addTextfield("Presión")
-     .setLabel("Presión (Bar)")
-     .setPosition(800, 300)
-     .setSize(300, 30)
-     .setFont(createFont("arial",20))
-     .setAutoClear(false)
-     ;
-
-cp5.addTextfield("Temp")
-     .setLabel("Temperatura (C)")
-     .setPosition(800, 450)
-     .setSize(300, 30)
-     .setFont(createFont("arial",20))
-     .setAutoClear(false)
-     ;
-
-     }
-
+  interfaz();
+}
+    
 
 void draw() {
  background (0);
  textSize(100);
-fill(0, 128, 0); 
-text("EQ CALCULATOR", 500, 150);
+ fill(0, 128, 0); 
+ text("EQ CALCULATOR", 500, 150);
 
 }
