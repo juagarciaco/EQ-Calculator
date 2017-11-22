@@ -2,6 +2,7 @@ import java.lang.String;
 import java.lang.String;
 import controlP5.*;
 import java.util.*;
+PFont georgia;
 Slider slider1;
 Slider slider2;
 Slider slider3;
@@ -10,7 +11,8 @@ Slider slider5;
 Slider slider6;
 Slider slider7;
 Slider slider8;
-Textfield text1;
+Numberbox presion;
+Numberbox temperatura;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 
@@ -66,8 +68,10 @@ void draw() {
  background (0);
  textSize(100);
  fill(0, 128, 0); 
+ georgia = createFont("georgia", 90);
+ textFont(georgia);
  text("EQ CALCULATOR", 500, 150);
       fill(255);
-    text("valor" + text1.get(), 50,50); 
+    text("valor" + presion.getValue(), 50,50); 
 
 }

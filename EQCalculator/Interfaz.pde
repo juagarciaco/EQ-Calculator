@@ -103,20 +103,20 @@ void interfaz(){
       .setFont(createFont("arial",15))
       ;
 
-text1 = cp5.addTextfield("Presión")
+presion = cp5.addNumberbox("Presión")
      .setLabel("Presión (Bar)")
      .setPosition(800, 300)
      .setSize(300, 30)
-     .setFont(createFont("arial",20))
-     .setAutoClear(false)
+     .setRange(0, 1000)
+     .setFont(createFont("georgia",20))
      ;
 
-cp5.addTextfield("Temp")
+temperatura = cp5.addNumberbox("Temp")
      .setLabel("Temperatura (C)")
      .setPosition(800, 450)
      .setSize(300, 30)
-     .setFont(createFont("arial",20))
-     .setAutoClear(false)
+     .setRange(-273, 700)
+     .setFont(createFont("georgia",20))
      ;
 
      }
