@@ -109,6 +109,7 @@ presion = cp5.addNumberbox("Presión")
      .setSize(300, 30)
      .setRange(0, 1000)
      .setFont(createFont("georgia",20))
+     .setMultiplier(5)
      ;
 
 temperatura = cp5.addNumberbox("Temp")
@@ -117,6 +118,7 @@ temperatura = cp5.addNumberbox("Temp")
      .setSize(300, 30)
      .setRange(-273, 700)
      .setFont(createFont("georgia",20))
+     .setMultiplier(5)
      ;
 
      }
