@@ -61,7 +61,7 @@ void lnumero() {
     for(int i=1;i<9;i++ ){
       if(i>numero_comp){
         cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(false);
-        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false).setValue(0);
       }
       else {
         cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(true);
@@ -81,7 +81,6 @@ void setup() {
     
 
 void draw() {
-   //numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
    background (0);
    textSize(100);
    fill(0, 128, 0); 

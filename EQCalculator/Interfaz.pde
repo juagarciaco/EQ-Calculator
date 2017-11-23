@@ -89,6 +89,7 @@ void interfaz(){
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
+
      ;
           
      s2 =  cp5.addSlider("Composicion global 2")
