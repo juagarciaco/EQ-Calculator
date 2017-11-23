@@ -5,7 +5,7 @@ ControlP5 cp5;
 PFont georgia;
 float numero_comp;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
-ScrollableList numero,l1, l2, l3, l4, l5, l6, l7, l8;
+ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
 Numberbox temperatura;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
@@ -52,30 +52,36 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 
 //End of Program Data
 
-String selected = null;
+//String selected = null;
 
+void controlEvent(ControlEvent theEvent) {
+  // DropdownList is of type ControlGroup.
+  // A controlEvent will be triggered from inside the ControlGroup class.
+  // therefore you need to check the originator of the Event with
+  // if (theEvent.isGroup())
+  // to avoid an error message thrown by controlP5.
+
+  if (theEvent.isGroup()) {
+    // check if the Event was triggered from a ControlGroup
+    println("event from group : "+theEvent.getGroup().getValue()+" from "+theEvent.getGroup());
+  } 
+  else if (theEvent.isController()) {
+    println("event from controller : "+theEvent.getController().getValue()+" from "+theEvent.getController());
+    numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
+  }
+}
 
 void setup() {
   fullScreen();
   background(0);
-  cp5 = new ControlP5(this);  
-  numero = cp5.addScrollableList("Elija numero de componentes")
-     .setPosition(100, 100)
-     .setSize(300, 200)
-     .setBarHeight(20)
-     .setItemHeight(60)
-     .setOpen(true)
-     .addItems(l).setArrayValue(ListValue)
-     .setVisible(true)
-     ;
-     
+  numero_comp=2;
   interfaz(numero_comp);
 
 }
     
 
 void draw() {
-  numero_comp = numero.getArrayValue((int)numero.getValue());
+   //numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
    background (0);
    textSize(100);
    fill(0, 128, 0); 

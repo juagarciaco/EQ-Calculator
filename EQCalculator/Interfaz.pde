@@ -1,15 +1,5 @@
-void interfaz(float numero_comp){
+void interfaz(float n){
   
-  for(int j = 0; j < numero_comp; j++){
-     cp5 = new ControlP5(this);
-     cp5.addScrollableList("Elija el componente.")
-     .setPosition(100, 600 - (j*50))
-     .setSize(200, 100)
-     .setBarHeight(20)
-     .setOpen(false)
-     .setItemHeight(20)
-     .addItems(k);
-     } 
   /*for(int j = 0; j < 8; j++){
      cp5 = new ControlP5(this);
      cp5.addScrollableList("Elija el componente.")
@@ -18,12 +8,114 @@ void interfaz(float numero_comp){
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
-     .addItems(k);
-     }
+     .addItems(k)
+     .setVisible(false);
+     }*/
+     
+    cp5 = new ControlP5(this);  
+    lnumero = cp5.addScrollableList("Elija numero de componentes")
+       .setPosition(100, 100)
+       .setSize(300, 400)
+       .setBarHeight(60)
+       .setItemHeight(60)
+       .setOpen(true)
+       .addItems(l).setArrayValue(ListValue)
+       .setVisible(true)
+     ;
+     
+     
+     cp5 = new ControlP5(this);
+     
+     l1= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 600)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l2= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 550)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l3= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 500)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l4= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 450)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(true);
+     
+     cp5 = new ControlP5(this);
+     
+     l5= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 400)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l6= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 350)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l7= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 300)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
+     cp5 = new ControlP5(this);
+     
+     l8= cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 250)
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k)
+     .setVisible(false);
+     
      
      cp5 = new ControlP5(this);
        
-     slider1 =  cp5.addSlider("")
+     s1 =  cp5.addSlider("")
      .setPosition(400, 250)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -32,7 +124,7 @@ void interfaz(float numero_comp){
      
      cp5 = new ControlP5(this);
      
-     slider2 =  cp5.addSlider("")
+     s2 =  cp5.addSlider("")
      .setPosition(400, 300)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -41,7 +133,7 @@ void interfaz(float numero_comp){
 
      cp5 = new ControlP5(this);
      
-     slider3 =  cp5.addSlider("")
+     s3 =  cp5.addSlider("")
      .setPosition(400, 350)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -50,7 +142,7 @@ void interfaz(float numero_comp){
      
      cp5 = new ControlP5(this);
      
-     slider4 =  cp5.addSlider("")
+     s4 =  cp5.addSlider("")
      .setPosition(400, 400)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -59,7 +151,7 @@ void interfaz(float numero_comp){
           
      cp5 = new ControlP5(this);
      
-     slider5 =  cp5.addSlider("")
+     s5 =  cp5.addSlider("")
      .setPosition(400, 450)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -68,7 +160,7 @@ void interfaz(float numero_comp){
               
      cp5 = new ControlP5(this);
      
-     slider6 =  cp5.addSlider("")
+     s6 = cp5.addSlider("")
      .setPosition(400, 500)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -78,7 +170,7 @@ void interfaz(float numero_comp){
                
      cp5 = new ControlP5(this);
      
-     slider7 =  cp5.addSlider("")
+     s7 = cp5.addSlider("")
      .setPosition(400, 550)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
@@ -88,13 +180,12 @@ void interfaz(float numero_comp){
                
      cp5 = new ControlP5(this);
      
-     slider8 =  cp5.addSlider("")
+     s8 =  cp5.addSlider("")
      .setPosition(400, 600)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-        */
      
   cp5.addButton("Calcular")
       .setLabel("Calcular")
