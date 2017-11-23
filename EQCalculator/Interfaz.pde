@@ -14,9 +14,10 @@ void interfaz(){
           
      l1 = cp5.addScrollableList("Elija el componente 8.")
      .setPosition(100, 600)
-     .setSize(200, 100)
-     .setBarHeight(20)
+     .setSize(200, 150)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -24,8 +25,9 @@ void interfaz(){
      l2= cp5.addScrollableList("Elija el componente 7.")
      .setPosition(100, 550)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -33,8 +35,9 @@ void interfaz(){
      l3= cp5.addScrollableList("Elija el componente 6.")
      .setPosition(100, 500)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -42,8 +45,9 @@ void interfaz(){
      l4= cp5.addScrollableList("Elija el componente 5.")
      .setPosition(100, 450)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -51,8 +55,9 @@ void interfaz(){
      l5= cp5.addScrollableList("Elija el componente 4.")
      .setPosition(100, 400)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -60,8 +65,9 @@ void interfaz(){
      l6= cp5.addScrollableList("Elija el componente 3.")
      .setPosition(100, 350)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -69,8 +75,9 @@ void interfaz(){
      l7= cp5.addScrollableList("Elija el componente 2.")
      .setPosition(100, 300)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
@@ -78,64 +85,73 @@ void interfaz(){
      l8= cp5.addScrollableList("Elija el componente 1.")
      .setPosition(100, 250)
      .setSize(200, 100)
-     .setBarHeight(20)
+     .setBarHeight(30)
      .setOpen(false)
+     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
        
      s1 =  cp5.addSlider("Composicion global 1")
      .setPosition(400, 250)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
           
      s2 =  cp5.addSlider("Composicion global 2")
      .setPosition(400, 300)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
      
      s3 =  cp5.addSlider("Composicion global 3")
      .setPosition(400, 350)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
           
      s4 =  cp5.addSlider("Composicion global 4")
      .setPosition(400, 400)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
           
      s5 =  cp5.addSlider("Composicion global 5")
      .setPosition(400, 450)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
           
      s6 = cp5.addSlider("Composicion global 6")
      .setPosition(400, 500)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
          
      s7 = cp5.addSlider("Composicion global 7")
      .setPosition(400, 550)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
         
      s8 =  cp5.addSlider("Composicion global 8")
      .setPosition(400, 600)
-     .setSize(200, 20)
+     .setSize(200, 30)
+     .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
@@ -176,10 +192,22 @@ temperatura = cp5.addNumberbox("Temp")
      .setMultiplier(5)
      ;
 
-     }
+  cp5.addTab("default")
+     .setLabel("INICIO")
+     .setColorBackground(color(0, 70, 0))
+     .setColorLabel(color(255))
+     .setColorActive(color(255,128,0))
+     .setSize(100, 100)
+     ;
      
+  cp5.addTab("calculos")
+     .setColorBackground(color(0, 160, 100))
+     .setColorLabel(color(255))
+     .setColorActive(color(255,128,0))
+     .setSize(100, 100)    
+     ;        
 
-     
+}    
 /*public void comprobar_mezcla(){
   if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
     text("Suma de porcentajes debe ser 100.", 100, 900);

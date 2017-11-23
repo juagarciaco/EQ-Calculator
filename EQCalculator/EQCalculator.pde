@@ -56,7 +56,7 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 //String selected = null;
 
 void lnumero() {
-  if (check_number){
+ // if (check_number){
     numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
     for(int i=1;i<9;i++ ){
       if(i>numero_comp){
@@ -69,7 +69,7 @@ void lnumero() {
       }
     }
   }
-}
+//}
 
 void setup() {
   fullScreen();
