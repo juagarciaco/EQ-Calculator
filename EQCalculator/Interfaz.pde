@@ -156,7 +156,7 @@ void interfaz(){
       .setLabel("Calcular")
       .setPosition(1000, 600)
       .setSize(200, 100)
-      .setFont(createFont("arial",15))
+      .setFont(createFont("arial",30))
       ;
 
 presion = cp5.addNumberbox("Presión")
@@ -178,11 +178,4 @@ temperatura = cp5.addNumberbox("Temp")
      ;
 
      }
-     
-
-     
-/*public void comprobar_mezcla(){
-  if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
-    text("Suma de porcentajes debe ser 100.", 100, 900);
-  }
-}*/
+    

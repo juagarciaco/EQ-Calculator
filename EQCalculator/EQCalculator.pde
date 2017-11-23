@@ -4,7 +4,7 @@ import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
-boolean check_number=false;
+boolean check_composition = true;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -12,8 +12,8 @@ Numberbox temperatura;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
-List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
-List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
+//List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
+//List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
 //Program data
 double[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 0.000},
@@ -55,8 +55,32 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 
 //String selected = null;
 
+void setup() {
+  fullScreen();
+  background(0);
+  cp5 = new ControlP5(this);
+  interfaz();   
+}
+    
+
+void draw() {
+   background (0);
+   textSize(100);
+   fill(0, 128, 0); 
+   georgia = createFont("georgia", 90);
+   textFont(georgia);
+   text("EQ CALCULATOR", 500, 150);
+        fill(255);
+      //text("valor" + numero_comp, 50,50); 
+       textSize(20);
+       if(check_composition == false){
+       text("Suma de porcentajes debe ser 100.", 100, 700);  
+       }
+   fill (255,0,0);
+
+}
+
 void lnumero() {
-  if (check_number){
     numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
     for(int i=1;i<9;i++ ){
       if(i>numero_comp){
@@ -69,29 +93,16 @@ void lnumero() {
       }
     }
   }
+
+void comprobar_mezcla(){
+  if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
+    check_composition=false;
+  }
+  else {
+      check_composition=true;
+  }
 }
-
-void setup() {
-  fullScreen();
-  background(0);
-  cp5 = new ControlP5(this);
-  interfaz();   
-  check_number=true;
-}
-    
-
-void draw() {
-   background (0);
-   textSize(100);
-   fill(0, 128, 0); 
-   georgia = createFont("georgia", 90);
-   textFont(georgia);
-   text("EQ CALCULATOR", 500, 150);
-        /*fill(255);
-      text("valor" + numero_comp, 50,50); 
-       textSize(20);
-   fill (255,0,0);*/
-
- //comprobar_mezcla();
-
-}
+  
+void Calcular() {
+   comprobar_mezcla();
+  }
