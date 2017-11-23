@@ -53,27 +53,6 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 
 //End of Program Data
 
-//String selected = null;
-
-<<<<<<< HEAD
-void lnumero() {
- // if (check_number){
-    numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
-    for(int i=1;i<9;i++ ){
-      if(i>numero_comp){
-        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(false);
-        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false);
-      }
-      else {
-        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(true);
-        cp5.get(Slider.class,"Composicion global "+ i).setVisible(true);
-      }
-    }
-  }
-//}
-
-=======
->>>>>>> 3ae0479c201900b9f940092e7387c2b946a270f1
 void setup() {
   fullScreen();
   background(0);

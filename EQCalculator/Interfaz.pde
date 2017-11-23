@@ -193,7 +193,6 @@ temperatura = cp5.addNumberbox("Temp")
      .setMultiplier(5)
      ;
 
-<<<<<<< HEAD
   cp5.addTab("default")
      .setLabel("INICIO")
      .setColorBackground(color(0, 70, 0))
@@ -210,12 +209,5 @@ temperatura = cp5.addNumberbox("Temp")
      ;        
 
 }    
-/*public void comprobar_mezcla(){
-  if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
-    text("Suma de porcentajes debe ser 100.", 100, 900);
-  }
-}*/
-=======
-     }
-    
->>>>>>> 3ae0479c201900b9f940092e7387c2b946a270f1
+
+     
