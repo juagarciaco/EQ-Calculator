@@ -1,65 +1,45 @@
-void interfaz(float n){
+void interfaz(){
   
   /*for(int j = 0; j < 8; j++){
-     cp5 = new ControlP5(this);
+ 
      cp5.addScrollableList("Elija el componente.")
      .setPosition(100, 600 - (j*50))
      .setSize(200, 100)
      .setBarHeight(20)
-     .setOpen(false)
+     .setOpen(true)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
+     .setVisible(true);
      }*/
-     
-    cp5 = new ControlP5(this);  
-    lnumero = cp5.addScrollableList("Elija numero de componentes")
-       .setPosition(100, 100)
-       .setSize(300, 400)
-       .setBarHeight(60)
-       .setItemHeight(60)
-       .setOpen(true)
-       .addItems(l).setArrayValue(ListValue)
-       .setVisible(true)
-     ;
-     
-     
-     cp5 = new ControlP5(this);
-     
-     l1= cp5.addScrollableList("Elija el componente.")
+          
+     l1 = cp5.addScrollableList("Elija el componente 8.")
      .setPosition(100, 600)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     cp5 = new ControlP5(this);
-     
-     l2= cp5.addScrollableList("Elija el componente.")
+     .setVisible(true);
+         
+     l2= cp5.addScrollableList("Elija el componente 7.")
      .setPosition(100, 550)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     cp5 = new ControlP5(this);
-     
-     l3= cp5.addScrollableList("Elija el componente.")
+     .setVisible(true);
+          
+     l3= cp5.addScrollableList("Elija el componente 6.")
      .setPosition(100, 500)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     cp5 = new ControlP5(this);
-     
-     l4= cp5.addScrollableList("Elija el componente.")
+     .setVisible(true);
+         
+     l4= cp5.addScrollableList("Elija el componente 5.")
      .setPosition(100, 450)
      .setSize(200, 100)
      .setBarHeight(20)
@@ -67,124 +47,108 @@ void interfaz(float n){
      .setItemHeight(20)
      .addItems(k)
      .setVisible(true);
-     
-     cp5 = new ControlP5(this);
-     
-     l5= cp5.addScrollableList("Elija el componente.")
+         
+     l5= cp5.addScrollableList("Elija el componente 4.")
      .setPosition(100, 400)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     cp5 = new ControlP5(this);
-     
-     l6= cp5.addScrollableList("Elija el componente.")
+     .setVisible(true);
+         
+     l6= cp5.addScrollableList("Elija el componente 3.")
      .setPosition(100, 350)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     cp5 = new ControlP5(this);
-     
-     l7= cp5.addScrollableList("Elija el componente.")
+     .setVisible(true);
+      
+     l7= cp5.addScrollableList("Elija el componente 2.")
      .setPosition(100, 300)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
+     .setVisible(true);
      
-     cp5 = new ControlP5(this);
-     
-     l8= cp5.addScrollableList("Elija el componente.")
+     l8= cp5.addScrollableList("Elija el componente 1.")
      .setPosition(100, 250)
      .setSize(200, 100)
      .setBarHeight(20)
      .setOpen(false)
      .setItemHeight(20)
      .addItems(k)
-     .setVisible(false);
-     
-     
-     cp5 = new ControlP5(this);
+     .setVisible(true);
        
-     s1 =  cp5.addSlider("")
+     s1 =  cp5.addSlider("Composicion global 1")
      .setPosition(400, 250)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-     
-     cp5 = new ControlP5(this);
-     
-     s2 =  cp5.addSlider("")
+          
+     s2 =  cp5.addSlider("Composicion global 2")
      .setPosition(400, 300)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-
-     cp5 = new ControlP5(this);
      
-     s3 =  cp5.addSlider("")
+     s3 =  cp5.addSlider("Composicion global 3")
      .setPosition(400, 350)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-     
-     cp5 = new ControlP5(this);
-     
-     s4 =  cp5.addSlider("")
+          
+     s4 =  cp5.addSlider("Composicion global 4")
      .setPosition(400, 400)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
           
-     cp5 = new ControlP5(this);
-     
-     s5 =  cp5.addSlider("")
+     s5 =  cp5.addSlider("Composicion global 5")
      .setPosition(400, 450)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-              
-     cp5 = new ControlP5(this);
-     
-     s6 = cp5.addSlider("")
+          
+     s6 = cp5.addSlider("Composicion global 6")
      .setPosition(400, 500)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-     
-               
-     cp5 = new ControlP5(this);
-     
-     s7 = cp5.addSlider("")
+         
+     s7 = cp5.addSlider("Composicion global 7")
      .setPosition(400, 550)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-    
-               
-     cp5 = new ControlP5(this);
-     
-     s8 =  cp5.addSlider("")
+        
+     s8 =  cp5.addSlider("Composicion global 8")
      .setPosition(400, 600)
      .setSize(200, 20)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
+     ;
+             
+    lnumero = cp5.addScrollableList("lnumero")
+       .setLabel("Elija numero de componentes")
+       .setPosition(100, 100)
+       .setSize(300, 400)
+       .setBarHeight(60)
+       .setItemHeight(60)
+       .setOpen(true)
+       .addItems(l).setArrayValue(ListValue)
+       .setVisible(true)
      ;
      
   cp5.addButton("Calcular")
@@ -217,7 +181,7 @@ temperatura = cp5.addNumberbox("Temp")
 
      
 /*public void comprobar_mezcla(){
-  if ((slider1.getValue()+slider2.getValue()+slider3.getValue()+slider4.getValue()+slider5.getValue()+slider6.getValue()+slider7.getValue()+slider8.getValue()) != 100){
+  if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
     text("Suma de porcentajes debe ser 100.", 100, 900);
   }
 }*/

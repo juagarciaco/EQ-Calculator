@@ -4,6 +4,7 @@ import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
+boolean check_number=false;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -54,29 +55,28 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
 
 //String selected = null;
 
-void controlEvent(ControlEvent theEvent) {
-  // DropdownList is of type ControlGroup.
-  // A controlEvent will be triggered from inside the ControlGroup class.
-  // therefore you need to check the originator of the Event with
-  // if (theEvent.isGroup())
-  // to avoid an error message thrown by controlP5.
-
-  if (theEvent.isGroup()) {
-    // check if the Event was triggered from a ControlGroup
-    println("event from group : "+theEvent.getGroup().getValue()+" from "+theEvent.getGroup());
-  } 
-  else if (theEvent.isController()) {
-    println("event from controller : "+theEvent.getController().getValue()+" from "+theEvent.getController());
+void lnumero() {
+  if (check_number){
     numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
+    for(int i=1;i<9;i++ ){
+      if(i>numero_comp){
+        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(false);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false);
+      }
+      else {
+        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(true);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(true);
+      }
+    }
   }
 }
 
 void setup() {
   fullScreen();
   background(0);
-  numero_comp=2;
-  interfaz(numero_comp);
-
+  cp5 = new ControlP5(this);
+  interfaz();   
+  check_number=true;
 }
     
 
@@ -88,10 +88,10 @@ void draw() {
    georgia = createFont("georgia", 90);
    textFont(georgia);
    text("EQ CALCULATOR", 500, 150);
-        fill(255);
+        /*fill(255);
       text("valor" + numero_comp, 50,50); 
        textSize(20);
-   fill (255,0,0);
+   fill (255,0,0);*/
 
  //comprobar_mezcla();
 
