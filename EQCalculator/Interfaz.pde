@@ -98,6 +98,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
+
      ;
           
      s2 =  cp5.addSlider("Composicion global 2")
@@ -171,7 +172,7 @@ void interfaz(){
       .setLabel("Calcular")
       .setPosition(1000, 600)
       .setSize(200, 100)
-      .setFont(createFont("arial",15))
+      .setFont(createFont("arial",30))
       ;
 
 presion = cp5.addNumberbox("Presión")
@@ -192,6 +193,7 @@ temperatura = cp5.addNumberbox("Temp")
      .setMultiplier(5)
      ;
 
+<<<<<<< HEAD
   cp5.addTab("default")
      .setLabel("INICIO")
      .setColorBackground(color(0, 70, 0))
@@ -213,3 +215,7 @@ temperatura = cp5.addNumberbox("Temp")
     text("Suma de porcentajes debe ser 100.", 100, 900);
   }
 }*/
+=======
+     }
+    
+>>>>>>> 3ae0479c201900b9f940092e7387c2b946a270f1
