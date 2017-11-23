@@ -1,6 +1,16 @@
-void interfaz(){
+void interfaz(float numero_comp){
   
-   for(int j = 0; j < 8; j++){
+  for(int j = 0; j < numero_comp; j++){
+     cp5 = new ControlP5(this);
+     cp5.addScrollableList("Elija el componente.")
+     .setPosition(100, 600 - (j*50))
+     .setSize(200, 100)
+     .setBarHeight(20)
+     .setOpen(false)
+     .setItemHeight(20)
+     .addItems(k);
+     } 
+  /*for(int j = 0; j < 8; j++){
      cp5 = new ControlP5(this);
      cp5.addScrollableList("Elija el componente.")
      .setPosition(100, 600 - (j*50))
@@ -84,17 +94,7 @@ void interfaz(){
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE)
      ;
-        
-
-  cp5.addScrollableList("Elija numero de componentes")
-     .setPosition(100, 100)
-     .setSize(300, 200)
-     .setBarHeight(20)
-     .setItemHeight(20)
-     .setValue(1)
-     .setOpen(false)
-     .addItems(l)
-     ;
+        */
      
   cp5.addButton("Calcular")
       .setLabel("Calcular")
@@ -125,8 +125,8 @@ temperatura = cp5.addNumberbox("Temp")
      
 
      
-/*public void comprobar_mezcla{
-  if ((slider1+slider2+slider3+slider4+slider5+slider6+slider7+slider8) != 100){
-    text("ERROR: Suma de porcentajes debe ser 100.", 200, 700);
+/*public void comprobar_mezcla(){
+  if ((slider1.getValue()+slider2.getValue()+slider3.getValue()+slider4.getValue()+slider5.getValue()+slider6.getValue()+slider7.getValue()+slider8.getValue()) != 100){
+    text("Suma de porcentajes debe ser 100.", 100, 900);
   }
-} */
+}*/

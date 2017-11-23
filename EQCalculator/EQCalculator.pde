@@ -1,20 +1,18 @@
 import java.lang.String;
-import java.lang.String;
 import controlP5.*;
 import java.util.*;
+ControlP5 cp5;
 PFont georgia;
-Slider slider1;
-Slider slider2;
-Slider slider3;
-Slider slider4;
-Slider slider5;
-Slider slider6;
-Slider slider7;
-Slider slider8;
+float numero_comp;
+Slider s1, s2, s3, s4, s5, s6, s7, s8;
+ScrollableList numero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
 Numberbox temperatura;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
+float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
+List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
+List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
 //Program data
 double[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 0.000},
@@ -52,26 +50,43 @@ double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 
                                    {238.870, 226.184, 220.790, 215.307, 219.482, 227.000, 234.268, 237.230},
                                 };
 
+//End of Program Data
 
-ControlP5 cp5;
 String selected = null;
 
 
 void setup() {
   fullScreen();
   background(0);
-  interfaz();
+  cp5 = new ControlP5(this);  
+  numero = cp5.addScrollableList("Elija numero de componentes")
+     .setPosition(100, 100)
+     .setSize(300, 200)
+     .setBarHeight(20)
+     .setItemHeight(60)
+     .setOpen(true)
+     .addItems(l).setArrayValue(ListValue)
+     .setVisible(true)
+     ;
+     
+  interfaz(numero_comp);
+
 }
     
 
 void draw() {
- background (0);
- textSize(100);
- fill(0, 128, 0); 
- georgia = createFont("georgia", 90);
- textFont(georgia);
- text("EQ CALCULATOR", 500, 150);
-      fill(255);
-    text("valor" + presion.getValue(), 50,50); 
+  numero_comp = numero.getArrayValue((int)numero.getValue());
+   background (0);
+   textSize(100);
+   fill(0, 128, 0); 
+   georgia = createFont("georgia", 90);
+   textFont(georgia);
+   text("EQ CALCULATOR", 500, 150);
+        fill(255);
+      text("valor" + numero_comp, 50,50); 
+       textSize(20);
+   fill (255,0,0);
+
+ //comprobar_mezcla();
 
 }
