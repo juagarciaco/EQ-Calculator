@@ -20,6 +20,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
          
      l2= cp5.addScrollableList("Elija el componente 7.")
@@ -30,6 +31,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
           
      l3= cp5.addScrollableList("Elija el componente 6.")
@@ -40,6 +42,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
          
      l4= cp5.addScrollableList("Elija el componente 5.")
@@ -50,6 +53,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
          
      l5= cp5.addScrollableList("Elija el componente 4.")
@@ -60,6 +64,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
          
      l6= cp5.addScrollableList("Elija el componente 3.")
@@ -70,6 +75,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
       
      l7= cp5.addScrollableList("Elija el componente 2.")
@@ -80,6 +86,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
      
      l8= cp5.addScrollableList("Elija el componente 1.")
@@ -90,6 +97,7 @@ void interfaz(){
      .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
+     .setValueSelf(-1)
      .setVisible(true);
        
      s1 =  cp5.addSlider("Composicion global 1")
@@ -164,6 +172,7 @@ void interfaz(){
        .setItemHeight(60)
        .setOpen(false)
        .addItems(l).setArrayValue(ListValue)
+       .setValueSelf(-1)
        .setVisible(true);
      
   cp5.addButton("Calcular")
@@ -177,7 +186,7 @@ presion = cp5.addNumberbox("Presión")
      .setPosition(800, 300)
      .setSize(300, 30)
      .setDecimalPrecision(0)
-     .setRange(0, 1000)
+     .setRange(0, 200)
      .setFont(createFont("georgia",20))
      .setMultiplier(5);
 
