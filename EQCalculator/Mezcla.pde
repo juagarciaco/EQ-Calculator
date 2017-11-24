@@ -1,5 +1,5 @@
 class Mezcla{
-  void hacerMezcla(float[] componente, float[] composicion){
+  void hacerMezcla(int[] componente, int[] composicion){
     
   }
 }

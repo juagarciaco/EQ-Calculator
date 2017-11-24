@@ -12,6 +12,9 @@ List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 float[] ListValueComp = {1,2,3,4,5,6,7,8};
+float[] Componentes = {};
+float[] Composiciones = {};
+float pmezcla,tmezcla;
 //List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
@@ -57,7 +60,8 @@ void setup() {
   fullScreen();
   background(0);
   cp5 = new ControlP5(this);
-  interfaz();   
+  interfaz();
+  
 }
     
 
@@ -97,6 +101,8 @@ void comprobar_mezcla(){
   }
   else {
       check_composition=true;
+      ready=true;
+      recopilar_datos_interfaz();
   }
 }
 
@@ -109,9 +115,37 @@ void pasar_pestana(){
 void Calcular() {
    comprobar_mezcla();
    Mezcla m = new Mezcla();
-   m.hacerMezcla(ListValue,ListValue);
+   //m.hacerMezcla(ListValue,ListValue);
   }
+
+void recopilar_datos_interfaz() {
   
+  if(ready==true){
+    for(int i=1; i<numero_comp+1;i++){
+      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
+      Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());
+
+    }
+    pmezcla = presion.getValue();
+    tmezcla = temperatura.getValue();
+  }
+  println(Componentes);
+  println(Composiciones);
+  println(pmezcla);
+  println(tmezcla);
+  
+  /*switch (int (numero_comp)){
+   case 2:
+   
+   case 3:
+   case 4:
+   case 5:
+   case 6:
+   case 7:
+   case 8:
+   
+ }*/
+}
   /*void enviar a mezcla
   append
   switch*/
