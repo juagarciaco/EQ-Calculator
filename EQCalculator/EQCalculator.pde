@@ -20,7 +20,7 @@ PImage back;
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
 //Program data
-double[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 0.000},
+float[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 0.000},
                             {-2.313, 0.000, 0.569, 4.075, 1.146, 0.000, -0.801, -1.079},
                             {11.580, -0.916, 0.000, 0.000, -2.885, 0.000, 45.191, 0.422},
                             {-3.259, -5.639, 0.000, 0.000, 0.000, 0.000, 2.773, 0.000},
@@ -30,8 +30,8 @@ double[][] parameter_A = {  {0.000, 4.712, -1.709, 0.678, 0.000, 0.000, -0.693, 
                             {2.732, 3.458, 140.087, 162.477, 627.053, 8.844, 0.000, 0.054},
                           };
                           
-double[][] parameter_B = {  {0.000, -1162.300, 892.200, 295.500, 371.100, -71.9, 173.000, 114.100},
-                            {483.800, 0.000, -54.800, -1202.400, -113.500, -148.900, -246.200, 479.100},
+float[][] parameter_B = {  {0.000, -1162.300, 892.200, 295.500, 371.100, -71.9, 173.000, 114.100},
+                            {483.800, 0.000, -54.800, -1202.400, -113.500, -148.900, 246.200, 479.100},
                             {-3282.600, 882.000, 0.000, 122.700, 1124.000, -375.400, 591.400, -239.9},
                             {1677.600, 2504.200, -136.500, 0.000, 75.900, -17.700, 296.700, 173.600},
                             {446.900, 992.700, -863.700, -91.100, 0.000, -57.000, 14759.800, 630.100},
@@ -40,7 +40,7 @@ double[][] parameter_B = {  {0.000, -1162.300, 892.200, 295.500, 371.100, -71.9,
                             {101.900, 206.600, 306.100, 83.200, -400.500, -590.000, -1809.000, 0.000},
                           };
                           
-double[][] parameter_C = {  {0.0, 0.3, 0.4, 0.5, 0.3, 0.3, 0.3, 0.3},
+float[][] parameter_C = {  {0.0, 0.3, 0.4, 0.5, 0.3, 0.3, 0.3, 0.3},
                             {0.0, 0.0, 0.3, 0.3, 0.3, 0.3, 0.3, 0.3},
                             {0.0, 0.0, 0.0, 0.3, 0.3, 0.5, 0.2, 0.3},
                             {0.0, 0.0, 0.0, 0.0, 0.3, 0.3, 0.2, 0.3},
@@ -50,7 +50,7 @@ double[][] parameter_C = {  {0.0, 0.3, 0.4, 0.5, 0.3, 0.3, 0.3, 0.3},
                             {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
                           };
 
-double[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 6.93710, 8.01767, 7.23160},
+float[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 6.93710, 8.01767, 7.23160},
                                    {1574.990, 1592.864, 1211.033, 1453.430, 1344.800, 1171.200, 1715.7, 1277.030},
                                    {238.870, 226.184, 220.790, 215.307, 219.482, 227.000, 234.268, 237.230},
                                 };
@@ -96,7 +96,6 @@ void draw() {
        if(check_components == false){
        text("No deje componentes vacios o repetidos.", 100, 680);  
        }
-
 }
 
 void lnumero() {//Ejecutado al seleccionar # de comp/s
@@ -131,6 +130,7 @@ void comprobar_composiciones(){//ejecutado en Calcular
   }
   else {
       check_composition=true;
+      ready=true;
   }
 }
 
@@ -139,39 +139,27 @@ void pasar_pestana(){//No ejecutado
   }
 }
   
-void Calcular() {//Ejecutado al presionar calculado
+void Calcular() {//Ejecutado al presionar "calcular"
+   check_components=true;
    comprobar_componentes();
    comprobar_composiciones();
-   //Mezcla m = new Mezcla();
-   //m.hacerMezcla(ListValue,ListValue);
+   if(check_components==true && check_composition==true){
+   recopilar_datos_interfaz();
+   }
+   Mezcla m = new Mezcla();
+   m.hacerMezcla(/*Componentes,Composiciones,pmezcla,tmezcla*/);
+   //m.comprobar();
   }
 
-void recopilar_datos_interfaz() {//No ejecutado
+void recopilar_datos_interfaz() {//Ejecutado en Calcular
   
-  if(ready==true){
     for(int i=1; i<numero_comp+1;i++){
       Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());
     }
     pmezcla = presion.getValue();
     tmezcla = temperatura.getValue();
-  }
-  println(Componentes);
+  /*println(Componentes);
   println(Composiciones);
   println(pmezcla);
-  println(tmezcla);
-  
-  /*switch (int (numero_comp)){
-   case 2:
-   
-   case 3:
-   case 4:
-   case 5:
-   case 6:
-   case 7:
-   case 8:
-   
- }*/
+  println(tmezcla);*/
 }
-  /*void enviar a mezcla
-  append
-  switch*/

@@ -195,7 +195,7 @@ temperatura = cp5.addNumberbox("Temp")
      .setPosition(800, 450)
      .setSize(300, 30)
      .setDecimalPrecision(0)
-     .setRange(-273, 700)
+     .setRange(-272, 700)
      .setFont(createFont("georgia",20))
      .setMultiplier(5);
 
