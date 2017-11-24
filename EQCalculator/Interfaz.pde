@@ -96,6 +96,7 @@ void interfaz(){
      .setPosition(400, 250)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
@@ -103,6 +104,7 @@ void interfaz(){
      .setPosition(400, 300)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
      
@@ -110,6 +112,7 @@ void interfaz(){
      .setPosition(400, 350)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
@@ -117,6 +120,7 @@ void interfaz(){
      .setPosition(400, 400)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
@@ -124,6 +128,7 @@ void interfaz(){
      .setPosition(400, 450)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
@@ -131,6 +136,7 @@ void interfaz(){
      .setPosition(400, 500)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
          
@@ -138,6 +144,7 @@ void interfaz(){
      .setPosition(400, 550)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
         
@@ -145,6 +152,7 @@ void interfaz(){
      .setPosition(400, 600)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
+     .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
              
@@ -154,7 +162,7 @@ void interfaz(){
        .setSize(300, 400)
        .setBarHeight(60)
        .setItemHeight(60)
-       .setOpen(true)
+       .setOpen(false)
        .addItems(l).setArrayValue(ListValue)
        .setVisible(true);
      
@@ -168,6 +176,7 @@ presion = cp5.addNumberbox("Presión")
      .setLabel("Presión (Bar)")
      .setPosition(800, 300)
      .setSize(300, 30)
+     .setDecimalPrecision(0)
      .setRange(0, 1000)
      .setFont(createFont("georgia",20))
      .setMultiplier(5);
@@ -176,6 +185,7 @@ temperatura = cp5.addNumberbox("Temp")
      .setLabel("Temperatura (C)")
      .setPosition(800, 450)
      .setSize(300, 30)
+     .setDecimalPrecision(0)
      .setRange(-273, 700)
      .setFont(createFont("georgia",20))
      .setMultiplier(5);
