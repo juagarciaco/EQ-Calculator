@@ -3,7 +3,7 @@ import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
-boolean check_composition = true, ready=false;
+boolean check_composition = true, check_components=true, ready=false;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -61,6 +61,16 @@ void setup() {
   background(0);
   cp5 = new ControlP5(this);
   interfaz();
+  for(int i=1;i<9;i++ ){
+      if(i>numero_comp){
+        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(false);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false).setValue(0);
+      }
+      else {
+        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(true);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(true);
+      }
+    }
   
 }
     
@@ -74,14 +84,17 @@ void draw() {
    text("EQ CALCULATOR", 500, 150);
         fill(255,0,0);
       //text("valor" + numero_comp, 50,50); 
-       textSize(20);
+       textSize(13);
        if(check_composition == false){
-       text("Suma de porcentajes debe ser 100.", 400, 700);  
+       text("Suma de porcentajes debe ser 100.", 400, 680);  
+       }
+       if(check_components == false){
+       text("No deje componentes vacios o repetidos.", 100, 680);  
        }
 
 }
 
-void lnumero() {
+void lnumero() {//Ejecutado al seleccionar # de comp/s
     numero_comp = lnumero.getArrayValue((int)lnumero.getValue());
     for(int i=1;i<9;i++ ){
       if(i>numero_comp){
@@ -95,36 +108,44 @@ void lnumero() {
     }
   }
 
-void comprobar_mezcla(){
-  if ((s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue()) != 100){
+void comprobar_componentes(){//Ejecutado en Calcular
+  for(int i=1; i<numero_comp+1;i++){
+      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
+      if (cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1==0){
+       check_components=false; 
+      }
+      
+    }
+}
+
+
+void comprobar_composiciones(){//ejecutado en Calcular
+  float suma_composiciones = s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue();
+  if (suma_composiciones != 100){
     check_composition=false;
   }
   else {
       check_composition=true;
-      ready=true;
-      recopilar_datos_interfaz();
   }
 }
 
-void pasar_pestana(){
+void pasar_pestana(){//No ejecutado
   if(ready==true){
-    println("HOLA");
   }
 }
   
-void Calcular() {
-   comprobar_mezcla();
-   Mezcla m = new Mezcla();
+void Calcular() {//Ejecutado al presionar calculado
+   comprobar_componentes();
+   comprobar_composiciones();
+   //Mezcla m = new Mezcla();
    //m.hacerMezcla(ListValue,ListValue);
   }
 
-void recopilar_datos_interfaz() {
+void recopilar_datos_interfaz() {//No ejecutado
   
   if(ready==true){
     for(int i=1; i<numero_comp+1;i++){
-      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
       Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());
-
     }
     pmezcla = presion.getValue();
     tmezcla = temperatura.getValue();
