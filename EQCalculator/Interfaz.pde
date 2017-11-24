@@ -97,65 +97,56 @@ void interfaz(){
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
           
      s2 =  cp5.addSlider("Composicion global 2")
      .setPosition(400, 300)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
      
      s3 =  cp5.addSlider("Composicion global 3")
      .setPosition(400, 350)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
           
      s4 =  cp5.addSlider("Composicion global 4")
      .setPosition(400, 400)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
           
      s5 =  cp5.addSlider("Composicion global 5")
      .setPosition(400, 450)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
           
      s6 = cp5.addSlider("Composicion global 6")
      .setPosition(400, 500)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
          
      s7 = cp5.addSlider("Composicion global 7")
      .setPosition(400, 550)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
         
      s8 =  cp5.addSlider("Composicion global 8")
      .setPosition(400, 600)
      .setSize(200, 30)
      .setColorBackground(color(0, 128, 0))
      .setNumberOfTickMarks(21)
-     .setSliderMode(Slider.FLEXIBLE)
-     ;
+     .setSliderMode(Slider.FLEXIBLE);
              
     lnumero = cp5.addScrollableList("lnumero")
        .setLabel("Elija numero de componentes")
@@ -165,15 +156,13 @@ void interfaz(){
        .setItemHeight(60)
        .setOpen(true)
        .addItems(l).setArrayValue(ListValue)
-       .setVisible(true)
-     ;
+       .setVisible(true);
      
   cp5.addButton("Calcular")
       .setLabel("Calcular")
       .setPosition(1000, 600)
       .setSize(200, 100)
-      .setFont(createFont("arial",30))
-      ;
+      .setFont(createFont("arial",30));
 
 presion = cp5.addNumberbox("Presión")
      .setLabel("Presión (Bar)")
@@ -181,8 +170,7 @@ presion = cp5.addNumberbox("Presión")
      .setSize(300, 30)
      .setRange(0, 1000)
      .setFont(createFont("georgia",20))
-     .setMultiplier(5)
-     ;
+     .setMultiplier(5);
 
 temperatura = cp5.addNumberbox("Temp")
      .setLabel("Temperatura (C)")
@@ -190,23 +178,20 @@ temperatura = cp5.addNumberbox("Temp")
      .setSize(300, 30)
      .setRange(-273, 700)
      .setFont(createFont("georgia",20))
-     .setMultiplier(5)
-     ;
+     .setMultiplier(5);
 
   cp5.addTab("default")
      .setLabel("INICIO")
      .setColorBackground(color(0, 70, 0))
      .setColorLabel(color(255))
      .setColorActive(color(255,128,0))
-     .setSize(100, 100)
-     ;
+     .setSize(100, 100);
      
   cp5.addTab("calculos")
      .setColorBackground(color(0, 160, 100))
      .setColorLabel(color(255))
      .setColorActive(color(255,128,0))
-     .setSize(100, 100)    
-     ;        
+     .setSize(100, 100);        
 
 }    
 

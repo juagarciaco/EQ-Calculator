@@ -1,10 +1,9 @@
-import java.lang.String;
 import controlP5.*;
 import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
-boolean check_composition = true;
+boolean check_composition = true, ready=false;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -12,6 +11,7 @@ Numberbox temperatura;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
+float[] ListValueComp = {1,2,3,4,5,6,7,8};
 //List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
@@ -68,13 +68,12 @@ void draw() {
    georgia = createFont("georgia", 90);
    textFont(georgia);
    text("EQ CALCULATOR", 500, 150);
-        fill(255);
+        fill(255,0,0);
       //text("valor" + numero_comp, 50,50); 
        textSize(20);
        if(check_composition == false){
-       text("Suma de porcentajes debe ser 100.", 100, 700);  
+       text("Suma de porcentajes debe ser 100.", 400, 700);  
        }
-   fill (255,0,0);
 
 }
 
@@ -100,7 +99,19 @@ void comprobar_mezcla(){
       check_composition=true;
   }
 }
+
+void pasar_pestana(){
+  if(ready==true){
+    println("HOLA");
+  }
+}
   
 void Calcular() {
    comprobar_mezcla();
+   Mezcla m = new Mezcla();
+   m.hacerMezcla(ListValue,ListValue);
   }
+  
+  /*void enviar a mezcla
+  append
+  switch*/
