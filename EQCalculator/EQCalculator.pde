@@ -15,6 +15,7 @@ float[] ListValueComp = {1,2,3,4,5,6,7,8};
 float[] Componentes = {};
 float[] Composiciones = {};
 float pmezcla,tmezcla;
+PImage back;
 //List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
@@ -61,12 +62,14 @@ void setup() {
   background(0);
   cp5 = new ControlP5(this);
   interfaz();
+  back = loadImage("img/background.jpg");
+  back.resize(width,height);
   
 }
     
 
 void draw() {
-   background (0);
+   background (back);
    textSize(100);
    fill(0, 128, 0); 
    georgia = createFont("georgia", 90);
