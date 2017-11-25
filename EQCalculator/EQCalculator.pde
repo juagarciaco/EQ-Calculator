@@ -16,6 +16,7 @@ float[] Componentes = {};
 float[] Composiciones = {};
 float pmezcla,tmezcla;
 PImage back;
+boolean resultado = false;
 //List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
 
@@ -79,8 +80,8 @@ void setup() {
   
 }
     
-
 void draw() {
+  
    background (back);
    textSize(100);
    fill(0, 128, 0); 
@@ -96,6 +97,8 @@ void draw() {
        if(check_components == false){
        text("No deje componentes vacios o repetidos.", 100, 680);  
        }
+       
+        
 }
 
 void lnumero() {//Ejecutado al seleccionar # de comp/s
@@ -144,8 +147,11 @@ void Calcular() {//Ejecutado al presionar "calcular"
    comprobar_componentes();
    comprobar_composiciones();
    if(check_components==true && check_composition==true){
-   recopilar_datos_interfaz();
+    recopilar_datos_interfaz();
+ 
+ //  cp5.get(Button.class,"Elija el componente "+ i + ".").getValue()+1==0
    }
+   
    Mezcla m = new Mezcla();
    m.hacerMezcla(/*Componentes,Composiciones,pmezcla,tmezcla*/);
    //m.comprobar();
@@ -163,3 +169,6 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
   println(pmezcla);
   println(tmezcla);*/
 }
+
+
+//void pasar_pestaña(){

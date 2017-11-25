@@ -1,5 +1,41 @@
 void interfaz(){
   
+  
+  
+cp5.addTab("calculos")
+     .setColorBackground(color(0, 160, 100))
+     .setColorLabel(color(255))
+     .setColorActive(color(255,128,0))
+     ;
+     
+cp5.addTab("default")
+     .setLabel("INICIO")
+     .activateEvent(true)
+     .setColorBackground(color(0, 70, 0))
+     .setColorLabel(color(255))
+     .setColorActive(color(255,128,0))
+     .setSize(100, 200)
+     .setId(1);
+     
+cp5.getTab("calculos")
+     .activateEvent(true)
+     .setSize(100, 100)
+     .setId(2); 
+     
+cp5.addTextfield("γ= ")
+     .setBroadcast(false)
+     .setLabel("γ= ")
+     .setPosition(100,200)
+     .setSize(200,20)
+     .setBroadcast(true)
+     ;
+     
+  
+cp5.getController("γ= ").moveTo("calculos");
+
+     
+
+     
   /*for(int j = 0; j < 8; j++){
  
      cp5.addScrollableList("Elija el componente.")
@@ -188,7 +224,7 @@ presion = cp5.addNumberbox("Presión")
      .setDecimalPrecision(0)
      .setRange(0, 200)
      .setFont(createFont("georgia",20))
-     .setMultiplier(5);
+     .setMultiplier(1);
 
 temperatura = cp5.addNumberbox("Temp")
      .setLabel("Temperatura (C)")
@@ -197,20 +233,16 @@ temperatura = cp5.addNumberbox("Temp")
      .setDecimalPrecision(0)
      .setRange(-272, 700)
      .setFont(createFont("georgia",20))
-     .setMultiplier(5);
-
-  cp5.addTab("default")
-     .setLabel("INICIO")
-     .setColorBackground(color(0, 70, 0))
-     .setColorLabel(color(255))
-     .setColorActive(color(255,128,0))
-     .setSize(100, 100);
+     .setMultiplier(1);
      
-  cp5.addTab("calculos")
-     .setColorBackground(color(0, 160, 100))
-     .setColorLabel(color(255))
-     .setColorActive(color(255,128,0))
-     .setSize(100, 100);        
+ cp5.addTextlabel("Hola")   
+ .setBroadcast(false)
+           .setPosition(100,500)
+           .setFont(createFont("arial",20))
+           .setVisible(true)
+         .moveTo("calculos")
+         .setBroadcast(true)
+           ;
 
 }    
 
