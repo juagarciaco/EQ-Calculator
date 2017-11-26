@@ -3,7 +3,7 @@ import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
-boolean check_composition = true, check_components=true, ready=false, check_p= true;
+boolean check_composition = true, check_components=true, ready=false, check_p= true, check_null = true, check_diferentes = true;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -12,8 +12,7 @@ List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 float[] ListValueComp = {1,2,3,4,5,6,7,8};
-float[] Componentes = {};
-float[] Composiciones = {};
+float[] Componentes = {}, Composiciones = {};
 float pmezcla,tmezcla;
 PImage back;
 boolean resultado = false;
@@ -94,8 +93,14 @@ void draw() {
        if(check_composition == false){
        text("Suma de porcentajes debe ser 100.", 400, 680);  
        }
+       if(check_null == false){
+       text("Coloque porcentaje mayor a 0 en los componentes elegidos", 400, 700);  
+       }
        if(check_components == false){
-       text("No deje componentes vacios o repetidos.", 100, 680);  
+       text("No deje componentes vacios.", 100, 680);  
+       }
+       if(check_diferentes == false){
+       text("No elija componentes repetidos.", 100, 700);  
        }
        if(check_p == false){
        text("La presión no puede ser 0", 800, 400);
@@ -119,14 +124,37 @@ void lnumero() {//Ejecutado al seleccionar # de comp/s
 
 void comprobar_componentes(){//Ejecutado en Calcular
   for(int i=1; i<numero_comp+1;i++){
-      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
       if (cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1==0){
        check_components=false; 
       }
-      
-    }
+  }
+
 }
 
+void comprobar_diferentes(){//Ejecutado en Calcular
+int contador=0;
+  for(int i=2; i<numero_comp+2;i++){
+    for(int j=1; j<i;j++){
+      if ((cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1)==(cp5.get(ScrollableList.class,"Elija el componente "+ j + ".").getValue()+1)){
+       contador=contador+1;
+       }
+    }   
+  }
+  if (contador !=0){
+   check_diferentes=false; 
+  }
+}
+
+void comprobar_null(){
+ for(int i=1; i<numero_comp+1;i++){
+      if (cp5.get(Slider.class,"Composicion global "+ i).getValue()==0){
+       check_null=false; 
+      }
+      else {
+        check_null=true; 
+      }
+    } 
+}
 
 void comprobar_composiciones(){//ejecutado en Calcular
   float suma_composiciones = s1.getValue()+s2.getValue()+s3.getValue()+s4.getValue()+s5.getValue()+s6.getValue()+s7.getValue()+s8.getValue();
@@ -154,13 +182,14 @@ void pasar_pestana(){//No ejecutado
   
 void Calcular() {//Ejecutado al presionar "calcular"
    check_components=true;
+   check_diferentes=true;
    comprobar_componentes();
+   comprobar_diferentes();
    comprobar_composiciones();
+   comprobar_null();
    comprobar_presion();
-   if(check_components==true && check_composition==true && check_p==true){
+   if(check_components==true && check_composition==true && check_p==true && check_null==true && check_diferentes==true){
     recopilar_datos_interfaz();
- 
- //  cp5.get(Button.class,"Elija el componente "+ i + ".").getValue()+1==0
    }
    
    Mezcla m = new Mezcla();
@@ -169,10 +198,14 @@ void Calcular() {//Ejecutado al presionar "calcular"
   }
 
 void recopilar_datos_interfaz() {//Ejecutado en Calcular
-  
+    
     for(int i=1; i<numero_comp+1;i++){
-      Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());
+      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);     
+    } 
+    for(int i=1; i<numero_comp+1;i++){
+      Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());     
     }
+    
     pmezcla = presion.getValue();
     tmezcla = temperatura.getValue();
   /*println(Componentes);
