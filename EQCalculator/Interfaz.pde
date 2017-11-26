@@ -1,7 +1,5 @@
 void interfaz(){
   
-  
-  
 cp5.addTab("calculos")
      .setColorBackground(color(0, 160, 100))
      .setColorLabel(color(255))
@@ -53,7 +51,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 150)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -64,7 +61,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -75,7 +71,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -86,7 +81,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -97,7 +91,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -108,7 +101,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -119,7 +111,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -130,7 +121,6 @@ cp5.getController("γ= ").moveTo("calculos");
      .setSize(200, 100)
      .setBarHeight(30)
      .setOpen(false)
-     .setColorBackground(color(0, 128, 0))
      .setItemHeight(20)
      .addItems(k)
      .setValueSelf(-1)
@@ -139,7 +129,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s1 =  cp5.addSlider("Composicion global 1")
      .setPosition(400, 250)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -147,7 +136,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s2 =  cp5.addSlider("Composicion global 2")
      .setPosition(400, 300)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -155,7 +143,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s3 =  cp5.addSlider("Composicion global 3")
      .setPosition(400, 350)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -163,7 +150,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s4 =  cp5.addSlider("Composicion global 4")
      .setPosition(400, 400)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -171,7 +157,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s5 =  cp5.addSlider("Composicion global 5")
      .setPosition(400, 450)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -179,7 +164,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s6 = cp5.addSlider("Composicion global 6")
      .setPosition(400, 500)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -187,7 +171,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s7 = cp5.addSlider("Composicion global 7")
      .setPosition(400, 550)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
@@ -195,7 +178,6 @@ cp5.getController("γ= ").moveTo("calculos");
      s8 =  cp5.addSlider("Composicion global 8")
      .setPosition(400, 600)
      .setSize(200, 30)
-     .setColorBackground(color(0, 128, 0))
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
