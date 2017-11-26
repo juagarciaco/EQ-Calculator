@@ -1,0 +1,8 @@
+class Grafica{
+  
+void dibujar(){
+  
+
+}
+
+};
