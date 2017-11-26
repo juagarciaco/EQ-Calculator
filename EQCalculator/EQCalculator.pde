@@ -8,6 +8,7 @@ Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
 Numberbox temperatura;
+Chart myChart;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
@@ -107,7 +108,7 @@ void draw() {
        if(check_p == false){
        text("La presión no puede ser 0", 800, 400);
        }
-        
+    myChart.push("incoming", (sin(frameCount*0.1)*10));      
 }
 
 void lnumero() {//Ejecutado al seleccionar # de comp/s
@@ -219,6 +220,8 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
     cp5.get(Numberbox.class,"Temp").setVisible(false);
     cp5.get(Numberbox.class,"Presión").setVisible(false);
     cp5.get(Button.class,"Calcular").setVisible(false);
+    cp5.get(Toggle.class,"Liquido Vapor").setVisible(false);
+    myChart.setVisible(false);
   println(Componentes);
   println(Composiciones);
   println(pmezcla);

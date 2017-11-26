@@ -194,6 +194,26 @@ temperatura = cp5.addNumberbox("Temp")
      .setRange(-273, 700)
      .setFont(createFont("georgia",20))
      .setMultiplier(1);
+     
+  myChart = cp5.addChart("")
+               .setPosition(780, 600)
+               .setSize(200, 100)
+               .setRange(-20, 20)
+               .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
+               .setStrokeWeight(1.5)
+               .setColorCaptionLabel(color(40))
+               ;
+
+  myChart.addDataSet("incoming");
+  myChart.setData("incoming", new float[100]);   
+
+  cp5.addToggle("Liquido Vapor")
+     .setPosition(1200, 375)
+     .setSize(100, 30)
+     .setValue(true)
+     .setFont(createFont("times new roman", 13))
+     .setMode(ControlP5.SWITCH)
+     ;
 
 }    
 
