@@ -135,7 +135,7 @@ void comprobar_componentes(){//Ejecutado en Calcular
 
 void comprobar_diferentes(){//Ejecutado en Calcular
 int contador=0;
-  for(int i=2; i<numero_comp+2;i++){
+  for(int i=2; i<numero_comp+1;i++){
     for(int j=1; j<i;j++){
       if ((cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1)==(cp5.get(ScrollableList.class,"Elija el componente "+ j + ".").getValue()+1)){
        contador=contador+1;
