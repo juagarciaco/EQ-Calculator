@@ -1,38 +1,13 @@
 void interfaz(){
   
-cp5.addTab("calculos")
-     .setColorBackground(color(0, 160, 100))
-     .setColorLabel(color(255))
-     .setColorActive(color(255,128,0))
-     ;
      
 cp5.addTab("default")
      .setLabel("INICIO")
      .activateEvent(true)
      .setColorBackground(color(0, 70, 0))
      .setColorLabel(color(255))
-     .setColorActive(color(255,128,0))
      .setSize(100, 200)
      .setId(1);
-     
-cp5.getTab("calculos")
-     .activateEvent(true)
-     .setSize(100, 100)
-     .setId(2); 
-     
-cp5.addTextlabel("γ= ")
-     .setBroadcast(false)
-     .setLabel("γ= ")
-     .setPosition(100,200)
-     .setSize(200,20)
-     .setBroadcast(true)
-     ;
-     
-  
-cp5.getController("γ= ").moveTo("calculos");
-
-     
-
      
   /*for(int j = 0; j < 8; j++){
  
@@ -219,15 +194,6 @@ temperatura = cp5.addNumberbox("Temp")
      .setRange(-273, 700)
      .setFont(createFont("georgia",20))
      .setMultiplier(1);
-     
- cp5.addTextlabel("Hola")   
- .setBroadcast(false)
-         .setPosition(100,500)
-         .setFont(createFont("arial",20))
-         .setVisible(true)
-         .moveTo("calculos")
-         .setBroadcast(true)
-           ;
 
 }    
 

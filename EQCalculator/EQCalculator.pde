@@ -15,6 +15,7 @@ float[] ListValueComp = {1,2,3,4,5,6,7,8};
 float[] Componentes = {}, Composiciones = {};
 float pmezcla,tmezcla;
 PImage back;
+PImage titu;
 boolean resultado = false;
 //List Arreglo_Sliders = Arrays.asList(s1, s2, s3, s4, s5, s6, s7, s8);
 //List Arreglo_listas = Arrays.asList(l1, l2, l3, l4, l5, l6, l7, l8);
@@ -63,8 +64,9 @@ void setup() {
   cp5 = new ControlP5(this);
   interfaz();
 
-  back = loadImage("img/background.jpg");
+  back = loadImage("img/background.png");
   back.resize(width,height);
+  titu = loadImage("img/titulo.PNG");
   
   for(int i=1;i<9;i++ ){
       if(i>numero_comp){
@@ -86,7 +88,7 @@ void draw() {
    fill(0, 128, 0); 
    georgia = createFont("georgia", 90);
    textFont(georgia);
-   text("EQ CALCULATOR", 500, 150);
+   image(titu, 500, 100);
         fill(255,0,0);
       //text("valor" + numero_comp, 50,50); 
        textSize(13);
@@ -208,10 +210,19 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
     
     pmezcla = presion.getValue();
     tmezcla = temperatura.getValue();
-  /*println(Componentes);
+    
+    for(int i=1;i<9;i++ ){
+        cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").setVisible(false);
+        cp5.get(Slider.class,"Composicion global "+ i).setVisible(false);
+    }
+    cp5.get(ScrollableList.class,"lnumero").setVisible(false);
+    cp5.get(Numberbox.class,"Temp").setVisible(false);
+    cp5.get(Numberbox.class,"Presión").setVisible(false);
+    cp5.get(Button.class,"Calcular").setVisible(false);
+  println(Componentes);
   println(Composiciones);
   println(pmezcla);
-  println(tmezcla);*/
+  println(tmezcla);
 }
 
 
