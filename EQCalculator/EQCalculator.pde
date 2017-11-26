@@ -3,7 +3,7 @@ import java.util.*;
 ControlP5 cp5;
 PFont georgia;
 float numero_comp;
-boolean check_composition = true, check_components=true, ready=false;
+boolean check_composition = true, check_components=true, ready=false, check_p= true;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
@@ -97,7 +97,9 @@ void draw() {
        if(check_components == false){
        text("No deje componentes vacios o repetidos.", 100, 680);  
        }
-       
+       if(check_p == false){
+       text("La presión no puede ser 0", 800, 400);
+       }
         
 }
 
@@ -133,8 +135,16 @@ void comprobar_composiciones(){//ejecutado en Calcular
   }
   else {
       check_composition=true;
-      ready=true;
   }
+}
+
+void comprobar_presion(){
+ if (presion.getValue() == 0){
+   check_p = false;
+ }
+ else {
+   check_p = true;
+ }
 }
 
 void pasar_pestana(){//No ejecutado
@@ -146,7 +156,8 @@ void Calcular() {//Ejecutado al presionar "calcular"
    check_components=true;
    comprobar_componentes();
    comprobar_composiciones();
-   if(check_components==true && check_composition==true){
+   comprobar_presion();
+   if(check_components==true && check_composition==true && check_p==true){
     recopilar_datos_interfaz();
  
  //  cp5.get(Button.class,"Elija el componente "+ i + ".").getValue()+1==0
