@@ -8,19 +8,7 @@ void interfaz(){
      .setColorLabel(color(255))
      .setSize(100, 200)
      .setId(1);
-     
-  /*for(int j = 0; j < 8; j++){
- 
-     cp5.addScrollableList("Elija el componente.")
-     .setPosition(100, 600 - (j*50))
-     .setSize(200, 100)
-     .setBarHeight(20)
-     .setOpen(true)
-     .setItemHeight(20)
-     .addItems(k)
-     .setVisible(true);
-     }*/
-          
+
   l1 = cp5.addScrollableList("Elija el componente 8.")
      .setPosition(100, 600)
      .setSize(200, 150)
@@ -196,10 +184,10 @@ temperatura = cp5.addNumberbox("Temp")
      .setMultiplier(1);
      
   myChart = cp5.addChart("")
-               .setPosition(780, 600)
+               .setPosition(820, 600)
                .setSize(200, 100)
                .setRange(-20, 20)
-               .setView(Chart.BAR_CENTERED) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
+               .setView(Chart.BAR_CENTERED) 
                .setStrokeWeight(1.5)
                .setColorCaptionLabel(color(40))
                ;
@@ -207,7 +195,7 @@ temperatura = cp5.addNumberbox("Temp")
   myChart.addDataSet("incoming");
   myChart.setData("incoming", new float[100]);   
 
-  cp5.addToggle("Liquido Vapor")
+  switche = cp5.addToggle("Liquido Vapor")
      .setPosition(1200, 375)
      .setSize(100, 30)
      .setValue(true)

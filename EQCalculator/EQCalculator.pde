@@ -1,19 +1,24 @@
 import controlP5.*;
 import java.util.*;
 ControlP5 cp5;
-PFont georgia;
+PFont georgia,tnr;
 float numero_comp;
 boolean check_composition = true, check_components=true, ready=false, check_p= true, check_null = true, check_diferentes = true;
 Slider s1, s2, s3, s4, s5, s6, s7, s8;
 ScrollableList lnumero,l1, l2, l3, l4, l5, l6, l7, l8;
 Numberbox presion;
 Numberbox temperatura;
+Toggle switche;
 Chart myChart;
 List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
-List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
+List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona"); 
 float[] ListValueComp = {1,2,3,4,5,6,7,8};
-float[] Componentes = {}, Composiciones = {};
+float [] Componentes_float = {}; 
+int [] Componentes = {};
+String [] Nombres = {"Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona"};
+String [] Nombres_2 = {};
+float []Composiciones = {};
 float pmezcla,tmezcla;
 PImage back;
 PImage titu;
@@ -56,6 +61,16 @@ float[][] parameters_Antoine = {  {8.07240, 8.1122, 6.90565, 6.99052, 6.95464, 6
                                    {1574.990, 1592.864, 1211.033, 1453.430, 1344.800, 1171.200, 1715.7, 1277.030},
                                    {238.870, 226.184, 220.790, 215.307, 219.482, 227.000, 234.268, 237.230},
                                 };
+                                
+float[][] propiedades_puras = { {0.564, 512.6, 80.97,0.224,118},
+                                {0.645, 513.9, 61.48,0.240,167},
+                                {0.210, 562.2, 48.98,0.271,259},
+                                {0.322, 616.2, 35.11,0.260,379},
+                                {0.262, 591.8, 41.06,0.264,316},
+                                {0.222, 536.4, 54.72,0.293,239},
+                                {0.345, 647.1, 220.55,0.229,55.9},
+                                {0.307, 508.2, 47.1,0.233,209}                            
+                              };
 
 //End of Program Data
 
@@ -85,10 +100,6 @@ void setup() {
 void draw() {
   
    background (back);
-   textSize(100);
-   fill(0, 128, 0); 
-   georgia = createFont("georgia", 90);
-   textFont(georgia);
    image(titu, 500, 100);
         fill(255,0,0);
       //text("valor" + numero_comp, 50,50); 
@@ -109,8 +120,37 @@ void draw() {
        text("La presión no puede ser 0", 800, 400);
        }
        if(ready==true){
-       Grafica grafico = new Grafica();
-       grafico.dibujar(1000,475,300);
+         Grafica grafico = new Grafica();
+         grafico.dibujar(960,515,400);
+         if(switche.getValue()==1){
+           pushStyle();
+           fill(255);
+           tnr = createFont("times new roman", 25);
+           textFont(tnr);
+
+           for(int i=0;i<numero_comp;i++){
+             text(Nombres_2[i], 150, 300+(40*i));
+             text(Composiciones [i]*100,300,300+(40*i));
+             MezclaLiq m = new MezclaLiq();
+             m.hacerMezclaLiq();
+             m.dibujar();
+           }
+           popStyle();
+         }
+         else{
+           fill(255);
+           tnr = createFont("times new roman", 25);
+           textFont(tnr);
+           for(int i=0;i<numero_comp;i++){
+             text(Nombres_2[i], 150, 300+(40*i));
+             text(Composiciones [i]*100,300,300+(40*i));
+              MezclaVap p = new MezclaVap();
+               p.hacerMezclaVap();
+               p.dibujar();
+
+         }
+       }
+       
        }
     myChart.push("incoming", (sin(frameCount*0.1)*10));      
 }
@@ -197,20 +237,24 @@ void Calcular() {//Ejecutado al presionar "calcular"
    comprobar_presion();
    if(check_components==true && check_composition==true && check_p==true && check_null==true && check_diferentes==true){
     recopilar_datos_interfaz();
+
+     
+     MezclaVap p = new MezclaVap();
+     p.hacerMezclaVap();
+     p.comprobar();
    }
    
-   Mezcla m = new Mezcla();
-   m.hacerMezcla(/*Componentes,Composiciones,pmezcla,tmezcla*/);
-   //m.comprobar();
   }
 
 void recopilar_datos_interfaz() {//Ejecutado en Calcular
     
     for(int i=1; i<numero_comp+1;i++){
-      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);     
+      Componentes_float = append(Componentes_float,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
+      Nombres_2=append(Nombres_2,Nombres[floor(cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue())]);
+      Componentes = append(Componentes,floor(cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1));
     } 
     for(int i=1; i<numero_comp+1;i++){
-      Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());     
+      Composiciones = append(Composiciones,(cp5.get(Slider.class,"Composicion global "+ i).getValue())/100);     
     }
     
     pmezcla = presion.getValue();
@@ -226,9 +270,10 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
     cp5.get(Button.class,"Calcular").setVisible(false);
     cp5.get(Toggle.class,"Liquido Vapor").setVisible(false);
     myChart.setVisible(false);
+
     ready = true;
-  println(Componentes);
+ /* println(Componentes);
   println(Composiciones);
   println(pmezcla);
-  println(tmezcla);
+  println(tmezcla);*/
 }
