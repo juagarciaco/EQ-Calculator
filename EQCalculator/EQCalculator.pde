@@ -13,7 +13,9 @@ List l = Arrays.asList("2", "3", "4", "5", "6", "7", "8");
 float[] ListValue = {2,3,4,5,6,7,8};
 List k = Arrays.asList("Metanol", "Etanol", "Benceno", "P-Xileno", "Tolueno", "Cloroformo", "Agua", "Acetona");
 float[] ListValueComp = {1,2,3,4,5,6,7,8};
-float[] Componentes = {}, Composiciones = {};
+float [] Componentes_float = {}; 
+int [] Componentes = {};
+float []Composiciones = {};
 float pmezcla,tmezcla;
 PImage back;
 PImage titu;
@@ -197,16 +199,17 @@ void Calcular() {//Ejecutado al presionar "calcular"
    
    Mezcla m = new Mezcla();
    m.hacerMezcla(/*Componentes,Composiciones,pmezcla,tmezcla*/);
-   //m.comprobar();
+   m.comprobar();
   }
 
 void recopilar_datos_interfaz() {//Ejecutado en Calcular
     
     for(int i=1; i<numero_comp+1;i++){
-      Componentes = append(Componentes,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);     
+      Componentes_float = append(Componentes_float,cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1);
+      Componentes = append(Componentes,floor(cp5.get(ScrollableList.class,"Elija el componente "+ i + ".").getValue()+1));
     } 
     for(int i=1; i<numero_comp+1;i++){
-      Composiciones = append(Composiciones,cp5.get(Slider.class,"Composicion global "+ i).getValue());     
+      Composiciones = append(Composiciones,(cp5.get(Slider.class,"Composicion global "+ i).getValue())/100);     
     }
     
     pmezcla = presion.getValue();
@@ -222,10 +225,10 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
     cp5.get(Button.class,"Calcular").setVisible(false);
     cp5.get(Toggle.class,"Liquido Vapor").setVisible(false);
     myChart.setVisible(false);
-  println(Componentes);
+  /*println(Componentes);
   println(Composiciones);
   println(pmezcla);
-  println(tmezcla);
+  println(tmezcla);*/
 }
 
 
