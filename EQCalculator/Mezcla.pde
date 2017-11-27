@@ -7,6 +7,7 @@ class Mezcla{
         tau[i][j]=parameter_A[i][j]+parameter_B[i][j]/(tmezcla+273.15);//Hacer con append o calcular toda la matriz 8*8?
         G[i][j]=exp(-parameter_C[i][j]*tau[i][j]);//Hacer con append o calcular toda la matriz 8*8? 
       }
+    
     }
   }
   void comprobar(){

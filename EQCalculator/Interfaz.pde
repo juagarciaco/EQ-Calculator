@@ -1,7 +1,7 @@
 void interfaz(){
   
      
-cp5.addTab("default")
+  cp5.addTab("default")
      .setLabel("INICIO")
      .activateEvent(true)
      .setColorBackground(color(0, 70, 0))
@@ -21,7 +21,7 @@ cp5.addTab("default")
      .setVisible(true);
      }*/
           
-     l1 = cp5.addScrollableList("Elija el componente 8.")
+  l1 = cp5.addScrollableList("Elija el componente 8.")
      .setPosition(100, 600)
      .setSize(200, 150)
      .setBarHeight(30)
@@ -31,7 +31,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
          
-     l2= cp5.addScrollableList("Elija el componente 7.")
+  l2= cp5.addScrollableList("Elija el componente 7.")
      .setPosition(100, 550)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -41,7 +41,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
           
-     l3= cp5.addScrollableList("Elija el componente 6.")
+  l3= cp5.addScrollableList("Elija el componente 6.")
      .setPosition(100, 500)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -51,7 +51,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
          
-     l4= cp5.addScrollableList("Elija el componente 5.")
+  l4= cp5.addScrollableList("Elija el componente 5.")
      .setPosition(100, 450)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -61,7 +61,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
          
-     l5= cp5.addScrollableList("Elija el componente 4.")
+  l5= cp5.addScrollableList("Elija el componente 4.")
      .setPosition(100, 400)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -71,7 +71,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
          
-     l6= cp5.addScrollableList("Elija el componente 3.")
+  l6= cp5.addScrollableList("Elija el componente 3.")
      .setPosition(100, 350)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -81,7 +81,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
       
-     l7= cp5.addScrollableList("Elija el componente 2.")
+  l7= cp5.addScrollableList("Elija el componente 2.")
      .setPosition(100, 300)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -91,7 +91,7 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
      
-     l8= cp5.addScrollableList("Elija el componente 1.")
+  l8= cp5.addScrollableList("Elija el componente 1.")
      .setPosition(100, 250)
      .setSize(200, 100)
      .setBarHeight(30)
@@ -101,63 +101,63 @@ cp5.addTab("default")
      .setValueSelf(-1)
      .setVisible(true);
        
-     s1 =  cp5.addSlider("Composicion global 1")
+  s1 =  cp5.addSlider("Composicion global 1")
      .setPosition(400, 250)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
-     s2 =  cp5.addSlider("Composicion global 2")
+  s2 =  cp5.addSlider("Composicion global 2")
      .setPosition(400, 300)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
      
-     s3 =  cp5.addSlider("Composicion global 3")
+  s3 =  cp5.addSlider("Composicion global 3")
      .setPosition(400, 350)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
-     s4 =  cp5.addSlider("Composicion global 4")
+  s4 =  cp5.addSlider("Composicion global 4")
      .setPosition(400, 400)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
-     s5 =  cp5.addSlider("Composicion global 5")
+  s5 =  cp5.addSlider("Composicion global 5")
      .setPosition(400, 450)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
           
-     s6 = cp5.addSlider("Composicion global 6")
+  s6 = cp5.addSlider("Composicion global 6")
      .setPosition(400, 500)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
          
-     s7 = cp5.addSlider("Composicion global 7")
+  s7 = cp5.addSlider("Composicion global 7")
      .setPosition(400, 550)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
         
-     s8 =  cp5.addSlider("Composicion global 8")
+  s8 =  cp5.addSlider("Composicion global 8")
      .setPosition(400, 600)
      .setSize(200, 30)
      .setDecimalPrecision(0)
      .setNumberOfTickMarks(21)
      .setSliderMode(Slider.FLEXIBLE);
              
-    lnumero = cp5.addScrollableList("lnumero")
+  lnumero = cp5.addScrollableList("lnumero")
        .setLabel("Elija numero de componentes")
        .setPosition(100, 100)
        .setSize(300, 400)
@@ -171,7 +171,7 @@ cp5.addTab("default")
      
   cp5.addButton("Calcular")
       .setLabel("Calcular")
-      .setPosition(1000, 600)
+      .setPosition(1050, 600)
       .setSize(200, 100)
       .setFont(createFont("arial",30));
 
@@ -199,7 +199,7 @@ temperatura = cp5.addNumberbox("Temp")
                .setPosition(780, 600)
                .setSize(200, 100)
                .setRange(-20, 20)
-               .setView(Chart.LINE) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
+               .setView(Chart.BAR_CENTERED) // use Chart.LINE, Chart.PIE, Chart.AREA, Chart.BAR_CENTERED
                .setStrokeWeight(1.5)
                .setColorCaptionLabel(color(40))
                ;
@@ -215,6 +215,4 @@ temperatura = cp5.addNumberbox("Temp")
      .setMode(ControlP5.SWITCH)
      ;
 
-}    
-
-     
+}

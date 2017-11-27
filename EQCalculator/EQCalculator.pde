@@ -108,6 +108,10 @@ void draw() {
        if(check_p == false){
        text("La presión no puede ser 0", 800, 400);
        }
+       if(ready==true){
+       Grafica grafico = new Grafica();
+       grafico.dibujar(1000,475,300);
+       }
     myChart.push("incoming", (sin(frameCount*0.1)*10));      
 }
 
@@ -222,11 +226,9 @@ void recopilar_datos_interfaz() {//Ejecutado en Calcular
     cp5.get(Button.class,"Calcular").setVisible(false);
     cp5.get(Toggle.class,"Liquido Vapor").setVisible(false);
     myChart.setVisible(false);
+    ready = true;
   println(Componentes);
   println(Composiciones);
   println(pmezcla);
   println(tmezcla);
 }
-
-
-//void pasar_pestaña(){
