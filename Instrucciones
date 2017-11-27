@@ -1,0 +1,13 @@
+Elegir número de componentes.
+Elegir tipo de componentes con las listas desplegables.
+Con el uso de los sliders, elegir el porcentaje de cada componente.
+Con ayuda del scroll o desplazando hacia abajo con el mouse presionado, elegir la temperatura y presión de la mezcla.
+Ubicar el switch en el estado de mezcla deseado.
+Presionar calcular.
+
+*
+Restricciones:
+-No dejar componentes sin elegir.
+-No dejar presión en 0, ni ningún porcentaje.
+-No repetir componentes.
+-La suma de los porcentajes debe ser 100.
